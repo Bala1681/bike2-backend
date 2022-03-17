@@ -39,4 +39,6 @@ app.use(cors());
 app.use("/app", userRouter);
 
 // listening backend server from port from environment PORT variable.
-app.listen(process.env.PORT, () => console.log("Server is up and Running"));
+const port =process.env.PORT || 5050
+
+app.listen(port, () => console.log("Server is up and Running"));
